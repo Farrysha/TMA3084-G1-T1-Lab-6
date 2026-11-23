@@ -1,6 +1,11 @@
 {
+<<<<<<< HEAD
     "name": "lab_6",
     "short_name": "lab_6",
+=======
+    "name": "hotel_reservation_app",
+    "short_name": "hotel_reservation_app",
+>>>>>>> origin/main
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
