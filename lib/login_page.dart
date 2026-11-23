@@ -2,11 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'app_theme.dart';
 
-/// Lab Exercise 6.1 — Page 2 of 4: Login page.
-///
-/// Member 1 deliverable. Design and visual layout only: no authentication
-/// and no validation, as stated in the lab brief. "Sign in" simply moves
-/// the user to the dashboard page.
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 
@@ -36,7 +31,6 @@ class _LoginPageState extends State<LoginPage> {
     }
   }
 
-  /// AlertDialog (Lesson 8, Topic 02). Layout demonstration only.
   Future<void> _showForgotPasswordDialog() async {
     await showDialog<void>(
       context: context,

@@ -2,14 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'app_theme.dart';
 
-/// Guest type shown with a Material 3 SegmentedButton (Lesson 8, Topic 01).
 enum GuestType { leisure, business }
 
-/// Lab Exercise 6.1 — Page 1 of 4: Signup page.
-///
-/// Member 1 deliverable. Design and visual layout only: there is no
-/// authentication, no validation and no data is saved, as stated in the
-/// lab brief. The button simply moves the user to the login page.
 class SignupPage extends StatefulWidget {
   const SignupPage({super.key});
 
@@ -33,8 +27,6 @@ class _SignupPageState extends State<SignupPage> {
     );
   }
 
-  /// Named routes are registered by Member 5 in main.dart. The try/catch
-  /// keeps this page runnable on its own before integration day.
   void _goTo(String routeName) {
     try {
       Navigator.of(context).pushNamed(routeName);
@@ -132,7 +124,7 @@ class _SignupPageState extends State<SignupPage> {
             maxLength: 40,
             decoration: InputDecoration(
               labelText: 'Full name',
-              hintText: 'Nur Farrysha binti Ahmad',
+              hintText: 'Ali bin Ahmad',
               prefixIcon: Icon(Icons.person_outline_rounded),
               counterText: '',
             ),
