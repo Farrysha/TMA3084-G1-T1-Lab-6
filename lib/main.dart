@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 import 'app_theme.dart';
+import 'dashboard_page.dart';
 import 'login_page.dart';
+import 'rooms/rooms.dart';
 import 'signup_page.dart';
 
 void main() => runApp(const HotelDemoApp());
@@ -19,6 +21,9 @@ class HotelDemoApp extends StatelessWidget {
       routes: <String, WidgetBuilder>{
         SignupPage.routeName: (BuildContext context) => const SignupPage(),
         LoginPage.routeName: (BuildContext context) => const LoginPage(),
+        DashboardPage.routeName: (BuildContext context) =>
+            const DashboardPage(),
+        RoomListPage.routeName: (BuildContext context) => const RoomListPage(),
       },
     );
   }

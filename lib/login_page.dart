@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'app_theme.dart';
+import 'dashboard_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -236,7 +237,7 @@ class _LoginPageState extends State<LoginPage> {
 
           ElevatedButton(
             key: const Key('loginSubmit'),
-            onPressed: () => _goTo('/dashboard'),
+            onPressed: () => _goTo(DashboardPage.routeName),
             child: const Text('Sign in'),
           ),
           const SizedBox(height: 18),
