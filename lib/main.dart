@@ -12,7 +12,7 @@ import 'package:flutter/material.dart';
 import 'app_theme.dart';
 import 'dashboard_page.dart';
 import 'login_page.dart';
-import 'room_list_page.dart';
+import 'rooms/rooms.dart';
 import 'signup_page.dart';
 
 void main() => runApp(const HotelDemoApp());

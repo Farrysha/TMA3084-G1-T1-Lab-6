@@ -1,11 +1,9 @@
+// Ni placeholder page sja, nti ellyana boleh edit ikut design sndiri.
 import 'package:flutter/material.dart';
 
 import 'app_theme.dart';
-import 'room_list_page.dart';
+import 'rooms/rooms.dart';
 
-/// Placeholder home after sign-in.
-///
-/// Visual layout only. The only action is to continue to the room list.
 class DashboardPage extends StatelessWidget {
   const DashboardPage({super.key});
 

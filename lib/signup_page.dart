@@ -28,9 +28,8 @@ class _SignupPageState extends State<SignupPage> {
   // ---- Actions (navigation and visual feedback only) -----------------
 
   void _showMessage(String message) {
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text(message)),
-    );
+    ScaffoldMessenger.of(context)
+        .showSnackBar(SnackBar(content: Text(message)));
   }
 
   /// Named routes are registered by Member 5 in main.dart. The try/catch
@@ -132,7 +131,7 @@ class _SignupPageState extends State<SignupPage> {
             maxLength: 40,
             decoration: InputDecoration(
               labelText: 'Full name',
-              hintText: 'Nur Farrysha binti Ahmad',
+              hintText: 'Ayam',
               prefixIcon: Icon(Icons.person_outline_rounded),
               counterText: '',
             ),
