@@ -1,12 +1,5 @@
 import 'package:flutter/material.dart';
 
-/// Shared visual language for the Hotel Reservation App.
-///
-/// Member 1 owns this file so that every page in the group project
-/// (signup, login, dashboard, room list) uses the same palette,
-/// corner radius and input styling. Import it in main.dart:
-///
-///   theme: AppTheme.light,
 class AppTheme {
   AppTheme._();
 
@@ -21,7 +14,6 @@ class AppTheme {
   static const double radius = 16.0;
   static const double cardRadius = 26.0;
 
-  /// Signature header gradient, reused on every screen.
   static const LinearGradient brandGradient = LinearGradient(
     begin: Alignment.topLeft,
     end: Alignment.bottomRight,
@@ -119,7 +111,6 @@ class AppTheme {
   }
 }
 
-/// Small reusable pieces so signup and login look like one product.
 class BrandWordmark extends StatelessWidget {
   const BrandWordmark({
     super.key,
@@ -169,7 +160,6 @@ class BrandWordmark extends StatelessWidget {
   }
 }
 
-/// Decorative blurred circles used behind the brand gradient.
 class GradientBackdrop extends StatelessWidget {
   const GradientBackdrop({super.key, required this.child, this.height});
 
