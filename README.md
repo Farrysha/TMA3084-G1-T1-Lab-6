@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-# lab_6
-=======
 # hotel_reservation_app
->>>>>>> origin/main
 
 A new Flutter project.
 
