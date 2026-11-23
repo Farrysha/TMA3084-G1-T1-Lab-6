@@ -1,12 +1,3 @@
-// Local preview entry point for Member 1 only.
-//
-// Member 5 owns the real lib/main.dart. Use this file to run and screenshot
-// just the signup and login pages before integration:
-//
-//   flutter run -t lib/main_demo.dart
-//
-// Delete it (or leave it, it is harmless) once main.dart is wired up.
-
 import 'package:flutter/material.dart';
 
 import 'app_theme.dart';
