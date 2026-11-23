@@ -6,10 +6,6 @@ import 'data/sample_rooms.dart';
 import 'models/room_item.dart';
 import 'widgets/room_card.dart';
 
-/// Lab Exercise 6.1 — Page 4: room list, plus the booking form it opens.
-///
-/// Member 3 deliverable. The login page already navigates here with
-/// [routeName]. Choosing a room pushes [BookingFormPage].
 class RoomListPage extends StatefulWidget {
   const RoomListPage({super.key});
 
