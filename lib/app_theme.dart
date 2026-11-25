@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 
 class AppTheme {
   AppTheme._();
@@ -24,11 +24,7 @@ class AppTheme {
     final ColorScheme scheme = ColorScheme.fromSeed(
       seedColor: deepTeal,
       brightness: Brightness.light,
-    ).copyWith(
-      primary: deepTeal,
-      secondary: gold,
-      surface: Colors.white,
-    );
+    ).copyWith(primary: deepTeal, secondary: gold, surface: Colors.white);
 
     return ThemeData(
       useMaterial3: true,
@@ -46,8 +42,10 @@ class AppTheme {
         hintStyle: const TextStyle(color: mutedInk, fontSize: 14),
         labelStyle: const TextStyle(color: mutedInk),
         prefixIconColor: teal,
-        contentPadding:
-        const EdgeInsets.symmetric(horizontal: 16, vertical: 18),
+        contentPadding: const EdgeInsets.symmetric(
+          horizontal: 16,
+          vertical: 18,
+        ),
         // Hides the default underline and rounds every field.
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(radius),

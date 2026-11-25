@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 
 import 'app_theme.dart';
 import 'dashboard_page.dart';
@@ -19,9 +19,8 @@ class _LoginPageState extends State<LoginPage> {
   // ---- Actions (navigation and visual feedback only) -----------------
 
   void _showMessage(String message) {
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text(message)),
-    );
+    ScaffoldMessenger.of(context)
+        .showSnackBar(SnackBar(content: Text(message)));
   }
 
   void _goTo(String routeName) {
@@ -47,7 +46,7 @@ class _LoginPageState extends State<LoginPage> {
             children: <Widget>[
               Text(
                 'Enter the email linked to your Hotel Suites account and '
-                    'we will send a reset link.',
+                'we will send a reset link.',
                 style: TextStyle(fontSize: 13.5, color: AppTheme.mutedInk),
               ),
               SizedBox(height: 16),
@@ -68,9 +67,7 @@ class _LoginPageState extends State<LoginPage> {
               child: const Text('Cancel'),
             ),
             ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                minimumSize: const Size(120, 44),
-              ),
+              style: ElevatedButton.styleFrom(minimumSize: const Size(120, 44)),
               onPressed: () {
                 Navigator.of(dialogContext).pop();
                 _showMessage('Reset link sent.');
@@ -214,8 +211,10 @@ class _LoginPageState extends State<LoginPage> {
                       child: Text(
                         'Remember me',
                         overflow: TextOverflow.ellipsis,
-                        style:
-                        TextStyle(fontSize: 13, color: AppTheme.mutedInk),
+                        style: TextStyle(
+                          fontSize: 13,
+                          color: AppTheme.mutedInk,
+                        ),
                       ),
                     ),
                   ],

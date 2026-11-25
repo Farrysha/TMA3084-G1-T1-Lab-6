@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 
 import '../app_theme.dart';
 import 'models/room_item.dart';
@@ -70,9 +70,7 @@ class _BookingFormPageState extends State<BookingFormPage> {
     final int nights = _checkOut!.difference(_checkIn!).inDays;
     final String stay = nights == 1 ? '1 night' : '$nights nights';
     ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        content: Text('${widget.room.name} reserved for $stay.'),
-      ),
+      SnackBar(content: Text('${widget.room.name} reserved for $stay.')),
     );
   }
 
