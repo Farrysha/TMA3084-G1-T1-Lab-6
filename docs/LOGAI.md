@@ -5,7 +5,7 @@
 This log records AI assistance used while building the App. Each entry states the prompt given, what the tool proposed, and which suggestions were accepted or rejected, with reasons.
 
 # Amirul (103295)
-## Widget Tests & Coverage for `BookingFormPage` (`AC1`–`AC4`) – Gemini
+## Widget Tests & Coverage for `BookingFormPage` (`AC1`–`AC4`) 
 
 - **AI Tool:** Gemini
 - **Prompt Used:**
