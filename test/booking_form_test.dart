@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:hotel_reservation_app/rooms/booking_form_page.dart';
 import 'package:hotel_reservation_app/rooms/models/room_item.dart';
+import 'package:material_ui/material_ui.dart';
 
 Widget _buildTestApp() {
   final sampleRoom = RoomItem(
@@ -13,6 +13,7 @@ Widget _buildTestApp() {
   );
 
   return MaterialApp(
+    localizationsDelegates: GlobalMaterialLocalizations.delegates,
     home: BookingFormPage(room: sampleRoom),
   );
 }
