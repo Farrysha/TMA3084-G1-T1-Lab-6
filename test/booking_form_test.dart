@@ -55,8 +55,9 @@ void main() {
       expect(find.text('Guest name is required'), findsOneWidget);
     });
 
-    testWidgets('no error when guest name is filled',
-        (WidgetTester tester) async {
+    testWidgets('no error when guest name is filled', (
+      WidgetTester tester,
+    ) async {
       await pumpForm(tester);
       await tester.enterText(find.byKey(const Key('guestName')), 'Aminah');
       await submit(tester);
@@ -91,15 +92,17 @@ void main() {
   });
 
   group('Check-in validator', () {
-    testWidgets('error when check-in is not selected',
-        (WidgetTester tester) async {
+    testWidgets('error when check-in is not selected', (
+      WidgetTester tester,
+    ) async {
       await pumpForm(tester);
       await submit(tester);
       expect(find.text('Check-in date is required'), findsOneWidget);
     });
 
-    testWidgets('no error when check-in is selected',
-        (WidgetTester tester) async {
+    testWidgets('no error when check-in is selected', (
+      WidgetTester tester,
+    ) async {
       await pumpForm(tester);
       await openPicker(tester, 'checkIn');
       await confirmPicker(tester);
@@ -109,15 +112,17 @@ void main() {
   });
 
   group('Check-out validator', () {
-    testWidgets('error when check-out is not selected',
-        (WidgetTester tester) async {
+    testWidgets('error when check-out is not selected', (
+      WidgetTester tester,
+    ) async {
       await pumpForm(tester);
       await submit(tester);
       expect(find.text('Check-out date is required'), findsOneWidget);
     });
 
-    testWidgets('error when check-out is before check-in',
-        (WidgetTester tester) async {
+    testWidgets('error when check-out is before check-in', (
+      WidgetTester tester,
+    ) async {
       await pumpForm(tester);
 
       // Check-in: the 15th of next month.
@@ -138,8 +143,9 @@ void main() {
       expect(find.text('Check-out must be after check-in'), findsOneWidget);
     });
 
-    testWidgets('no error when check-out is after check-in',
-        (WidgetTester tester) async {
+    testWidgets('no error when check-out is after check-in', (
+      WidgetTester tester,
+    ) async {
       await pumpForm(tester);
       await pickValidStay(tester);
       await submit(tester);
@@ -149,8 +155,9 @@ void main() {
     });
   });
 
-  testWidgets('valid form shows the reservation confirmation',
-      (WidgetTester tester) async {
+  testWidgets('valid form shows the reservation confirmation', (
+    WidgetTester tester,
+  ) async {
     await pumpForm(tester);
     await tester.enterText(find.byKey(const Key('guestName')), 'Aminah');
     await tester.enterText(
