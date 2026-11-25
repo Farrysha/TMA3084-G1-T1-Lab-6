@@ -19,17 +19,17 @@ Widget _buildTestApp() {
 }
 
 Future<void> _selectDate(
-    WidgetTester tester, {
-      required Key fieldKey,
-      required DateTime initialPickerDate,
-      required DateTime targetDate,
-    }) async {
+  WidgetTester tester, {
+  required Key fieldKey,
+  required DateTime initialPickerDate,
+  required DateTime targetDate,
+}) async {
   await tester.tap(find.byKey(fieldKey));
   await tester.pumpAndSettle();
 
   final int monthsToAdvance =
       (targetDate.year - initialPickerDate.year) * 12 +
-          (targetDate.month - initialPickerDate.month);
+      (targetDate.month - initialPickerDate.month);
 
   if (monthsToAdvance > 0) {
     for (int i = 0; i < monthsToAdvance; i++) {
