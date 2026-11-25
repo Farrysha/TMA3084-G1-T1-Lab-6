@@ -70,9 +70,7 @@ class _BookingFormPageState extends State<BookingFormPage> {
     final int nights = _checkOut!.difference(_checkIn!).inDays;
     final String stay = nights == 1 ? '1 night' : '$nights nights';
     ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        content: Text('${widget.room.name} reserved for $stay.'),
-      ),
+      SnackBar(content: Text('${widget.room.name} reserved for $stay.')),
     );
   }
 

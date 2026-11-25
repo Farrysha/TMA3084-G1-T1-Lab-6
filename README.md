@@ -1,5 +1,7 @@
 # hotel_reservation_app
 
+![CI](https://github.com/Farrysha/TMA3084-G1-T1-Lab-6/actions/workflows/ci.yml/badge.svg)
+
 A new Flutter project.
 
 ## Getting Started
