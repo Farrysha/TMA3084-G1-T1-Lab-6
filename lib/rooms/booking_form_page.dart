@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import '../app_theme.dart';
 import 'models/room_item.dart';
 import 'utils/stay_dates.dart';
-import 'widgets/booking_preferences.dart';
 
 /// Guest details and stay dates for the suite chosen on the room list.
 class BookingFormPage extends StatefulWidget {
@@ -24,13 +23,6 @@ class _BookingFormPageState extends State<BookingFormPage> {
 
   DateTime? _checkIn;
   DateTime? _checkOut;
-
-  double _adults = 3;
-  double _children = 1;
-  bool _breakfast = false;
-  bool _airportPickup = true;
-  bool _spaAccess = false;
-  String _roomView = 'Sea View';
 
   @override
   void dispose() {
@@ -77,19 +69,9 @@ class _BookingFormPageState extends State<BookingFormPage> {
 
     final int nights = _checkOut!.difference(_checkIn!).inDays;
     final String stay = nights == 1 ? '1 night' : '$nights nights';
-    final List<String> extras = <String>[
-      if (_breakfast) 'breakfast',
-      if (_airportPickup) 'airport pickup',
-      if (_spaAccess) 'spa access',
-    ];
-    final String extraText = extras.isEmpty ? 'no extras' : extras.join(', ');
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
-        content: Text(
-          '${widget.room.name} reserved for $stay. '
-          '${_adults.round()} adults, ${_children.round()} children, '
-          '$_roomView, $extraText.',
-        ),
+        content: Text('${widget.room.name} reserved for $stay.'),
       ),
     );
   }
@@ -302,27 +284,6 @@ class _BookingFormPageState extends State<BookingFormPage> {
                 ),
               ),
             ],
-            const SizedBox(height: 22),
-            BookingPreferences(
-              adults: _adults,
-              children: _children,
-              breakfast: _breakfast,
-              airportPickup: _airportPickup,
-              spaAccess: _spaAccess,
-              roomView: _roomView,
-              onAdultsChanged: (double value) =>
-                  setState(() => _adults = value),
-              onChildrenChanged: (double value) =>
-                  setState(() => _children = value),
-              onBreakfastChanged: (bool value) =>
-                  setState(() => _breakfast = value),
-              onAirportPickupChanged: (bool value) =>
-                  setState(() => _airportPickup = value),
-              onSpaAccessChanged: (bool value) =>
-                  setState(() => _spaAccess = value),
-              onRoomViewChanged: (String value) =>
-                  setState(() => _roomView = value),
-            ),
             const SizedBox(height: 18),
             ElevatedButton(
               key: const Key('bookNow'),
