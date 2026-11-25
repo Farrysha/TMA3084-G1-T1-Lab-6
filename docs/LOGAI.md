@@ -30,3 +30,47 @@ This log records AI assistance used while building the App. Each entry states th
 - **Reasons for Decisions:**
   - Because `BookingFormPage` imports `package:material_ui/material_ui.dart`, `material_ui`'s `TextField` checks its own localization context; providing `material_ui`'s `MaterialApp` with `GlobalMaterialLocalizations.delegates` in `_buildTestApp()` resolves the error without altering production widget behavior.
   - Explicit forward/backward month navigation in `_selectDate` keeps `AC3` and `AC4` deterministic across month boundaries.
+
+---
+
+# Ellyanaironie (106980)
+## Matching the team themes
+
+- **AI Tool:** Claude
+- **Prompt Used:**
+  > "Match the theme to my code and make it consistent: [app_theme full file pasted]"
+
+- **Generated Suggestions:**
+  - Replace the plain blue colors with `AppTheme` colors, the brand gradient, and the shared radius values.
+  - Let the button take its style from the theme’s `ElevatedButton`.
+  - Add routeName = `/dashboard`’, to make it consistent.
+  
+- **Accepted Changes:**
+  - All above.
+  
+- **Rejected Changes:**
+  -The original theme before using `app_theme.dart`.
+
+- **Reasons for Decisions:**
+  - To make sure the app theme are consistent.
+  - 
+## Connecting the page and fixing errors
+
+- **AI Tool:** Claude
+- **Prompt Used:**
+  > "Connect my page and help me with the errors:[compile errors from dashboard page.dart]"
+
+- **Generated Suggestions:**
+  - A `main.dart` that registers `/signup`, `/login`, `/dashboard` and `/rooms` and uses `AppTheme.light`
+  - Explained that the “route is not registered” message means`/dashboard` was missing from `main.dart`.
+
+- **Accepted Changes:**
+  - All above.
+
+- **Rejected Changes:**
+  -No rejected changes.
+
+- **Reasons for Decisions:**
+  - To make sure that each page could interact with one another.
+
+
